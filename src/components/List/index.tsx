@@ -31,28 +31,42 @@ export function List() {
         setIsNewPasswordModal(false);
       }
 
+    function handleHidePassword() {
+        let  button = document.getElementById("action-btn") as HTMLButtonElement;
+
+        button.addEventListener("click", function() {
+            let container = document.getElementById("container") as HTMLTableElement;
+
+            container.classList.toggle("hide");
+        })
+
+    }
     
     return (
         <Container>
             <h1>My Passwords</h1>
             <Content>
-            {lists.map(list => (
+           
                 <table> 
 
                     <tbody>
+                        {lists.map(list => (
                             <tr  key={list.id}>
                                 <td>{list.identifier}</td>
 
-                                <td typeof="password" >{list.password}</td>
+                                <td id="container">{list.password}
+                                
+                                </td>
 
-                                <Box>
+                                <Box onClick={handleHidePassword}  id="action-btn" >
                                     <img src={visibilityBlack} alt="Ocultar" />
                                 </Box>
                             </tr>
+                        ))}        
                     </tbody>
 
                 </table> 
-            ))}
+            
 
 
                 

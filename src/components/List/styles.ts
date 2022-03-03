@@ -7,7 +7,11 @@ export const Container = styled.div`
     height: 90vh;
     margin: auto;
     margin-top: 2rem;
-    border: 2px transparent;
+    border: 1px solid red;
+
+    h1 {
+        font-size: 2.5rem;
+    }
     
 
 
@@ -54,38 +58,44 @@ export const Content = styled.div`
     /* align-items: center;  */
 
     table {
-        width: 100%;
-        height: 4.5rem;
-        margin-bottom: 1rem;
-        padding-left: 0.8rem;
-        padding-top: 2rem;
+        /* width: 100%; */
+        /* height: 100%; */
+        /* margin-bottom: 1rem; */
+        /* padding-left: 0.8rem; */
+        /* padding-top: 2rem; */
         display: flex;
         flex-direction: column;
         justify-content: center;
+        border: 1px solid red;
 
-        background-color: var(--background);
         color: var(--title);
         font-size: 1.12rem;
         border-radius: 8px;
         filter: brightness(1.4);
 
+        tbody {
+            border: 1px solid green;
+
+        }
+
         td {
             display: flex;
             font-weight: 300;
+            /* border: 1px solid yellow ; */
+            width: 100%;
+            background-color: var(--background);
+
+            &:first-child{
+                    font-weight: 700;
+
         }
 
         tr {
-            width: 100%;
 
             .hide{
                 display: none;
             }
-
-            &:first-child{
-                td{
-                    font-weight: 700;
-                }
-            }
+        }
         }
     }
 `;
