@@ -1,25 +1,13 @@
 import { Box, Content, Container } from "./styles";
 import  visibilityBlack  from "../../assets/visibilityBlack.svg";
-import visibilityOffBlack from "../../assets/visibilityOffBlack.svg";
 import { NewPasswordModal } from "../NewPasswordModal";
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
-
-interface List {
-    id: number;
-    identifier: string;
-    password: string
-}
+import { useContext, useState } from "react";
+import { ListContext } from "../../ListContext";
 
 
 export function List() {  
-    const [lists, setLists] = useState<List[]>([]);
 
-    useEffect(() => {
-        api.get('/list')
-            .then(response => setLists(response.data.lists))
-    }, []);
-
+    const { lists } = useContext(ListContext);
 
     const [isNewPasswordModal, setIsNewPasswordModal] = useState(false);
 
@@ -55,7 +43,6 @@ export function List() {
                                 <td>{list.identifier}</td>
 
                                 <td id="container">{list.password}
-                                
                                 </td>
 
                                 <Box onClick={handleHidePassword}  id="action-btn" >

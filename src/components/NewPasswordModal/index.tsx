@@ -1,6 +1,8 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useContext } from "react";
 import Modal from "react-modal";
+import { ListContext } from "../../ListContext";
 import { api } from "../../services/api";
+
 import { Content } from "./styles";
 
 
@@ -10,19 +12,22 @@ interface  NewPasswordModalProps {
 }
 
 export function NewPasswordModal({ isOpen, onRequestClose }: NewPasswordModalProps) {
+    const { createList } = useContext(ListContext)
     const [identifier, setIdentifier] = useState('');
     const [password, setPassword] = useState('');
 
 
-    function handleCreateNewPassword(event: FormEvent) {
+    async function handleCreateNewPassword(event: FormEvent) {
         event.preventDefault();//previne o comportamento padrão do modal, que é regarregar a pagina toda vez que é enviado um formulario
-        
-        const data = {
+
+        await createList({
             identifier,
             password,
-        };
+        })
 
-        api.post('/list', data)
+        setIdentifier('');//vai apagar o valores do modal e fechar o modal caso o cadastro de certo
+        setPassword('');
+        onRequestClose();
     }
 
     return (

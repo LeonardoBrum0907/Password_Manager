@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import { createServer, Model } from 'miragejs';
 import { App } from './App';
 
+type List = {
+  id: number;
+  identifier: string;
+  password: string;
+}
+
 createServer({
   models: {
-    list: Model,
+    list: Model.extend<Partial<List>>({}),
   },
 
   seeds(server) {
