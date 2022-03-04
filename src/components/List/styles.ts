@@ -7,7 +7,7 @@ export const Container = styled.div`
     height: 90vh;
     margin: auto;
     margin-top: 2rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     h1 {
         font-size: 2.5rem;
@@ -53,7 +53,7 @@ export const Container = styled.div`
     
 `;
 export const Content = styled.div`
-    max-width: 100%;
+    /* max-width: 100%; */
     /* display: flex; */
     /* align-items: center;  */
 
@@ -66,7 +66,7 @@ export const Content = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border: 1px solid red;
+        /* border: 1px solid red; */
 
         color: var(--title);
         font-size: 1.12rem;
@@ -74,37 +74,50 @@ export const Content = styled.div`
         filter: brightness(1.4);
 
         tbody {
-            border: 1px solid green;
-
-        }
-
-        td {
             display: flex;
-            font-weight: 300;
-            /* border: 1px solid yellow ; */
-            width: 100%;
-            background-color: var(--background);
+            flex-direction: column;
+            gap: 10px;
+            /* border: 1px solid green; */
 
-            &:first-child{
-                    font-weight: 700;
+            
+            tr {
+                position: relative;
+                width: 100%;
+                padding: 15px 0 ;
+                background-color: var(--background);
+                /* border: solid 1px red; */
+                max-height: 71px;
+                border-radius: 8px;
+                
 
-        }
+                /* .hide{
+                    display: none;
+                } */
 
-        tr {
+                td {
+                    display: flex;
+                    font-weight: 300;
+                    /* border: 1px solid green ; */
+                    width: 100%;
+                    margin-left: 15px;
 
-            .hide{
-                display: none;
+
+                    &:first-child{
+                        /* margin-top: 17px; */
+
+                        font-weight: 700;
+                    }
+                }
             }
-        }
-        }
+        }        
     }
 `;
 
 
 export const Box = styled.div`
-    position: relative;
-    left: 23.5rem;
-    bottom: 2.3rem;
+    position: absolute;
+    left: 25.5rem;
+    bottom: 1.3rem;
 
     display: flex;
     align-items: center;
