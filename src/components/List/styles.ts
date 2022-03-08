@@ -4,91 +4,97 @@ export const Container = styled.div`
     position: relative;
     background: var(--background);
     max-width: 28rem;
-    height: 90vh;
+    height: 100vh;
     margin: auto;
-    margin-top: 2rem;
-    /* border: 1px solid red; */
+    padding: 49px 0 35px 24px;
 
     h1 {
-        font-size: 2.5rem;
-    }
-    
-
-
-    /* border-color: var(--background); */
-
-    @media(min-width: 720px) {
-        max-width: 28rem;
-    }
-
-    h1 {
-        font-size: 2rem;
+        font-size: 36px;
         font-weight: 500;
         color: var(--title);
-        margin: 4rem 0 2.5rem;
+        margin-bottom: 40px;
     }
 
+    button {
+        position: absolute;
+        bottom: 24px;
+        height: 3.5rem;
+        width: 90%;
 
-        button {
-            position: absolute;
-            bottom: 2.2rem;
-            height: 3.5rem;
-            width: 100%;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--text-button);
+        background: var(--button);
+        outline: 0;
+        border: 0;
+        border-radius: 0.5rem;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--text-button);
-            background: var(--button);
-            outline: 0;
-            border: 0;
-            border-radius: 0.5rem;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        transition: filter 0.2s;
 
-            transition: filter 0.2s;
-
-            &:hover {
-                filter: brightness(0.7)
-            }
+        &:hover {
+            filter: brightness(0.7)
         }
+
+        @media(max-width: 425px) {
+            width: 89%;
+        }
+        @media(max-width: 374px) {
+            width: 274px;
+        }
+    }
     
 `;
 export const Content = styled.div`
-    /* max-width: 100%; */
-    /* display: flex; */
-    /* align-items: center;  */
+    max-width: 100%;
+    max-height: 75%;
+    align-items: center; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 12px;
+
+    @media(max-height: 570px) {
+        max-height: 70%;
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px; 
+
+        background-color: transparent;
+    }
+
+    &:hover {
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--input);    
+            border-radius: 20px;       
+        }
+    }
 
     table {
-        /* width: 100%; */
-        /* height: 100%; */
-        /* margin-bottom: 1rem; */
-        /* padding-left: 0.8rem; */
-        /* padding-top: 2rem; */
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* border: 1px solid red; */
 
         color: var(--title);
         font-size: 1.12rem;
         border-radius: 8px;
-        filter: brightness(1.4);
 
         tbody {
             display: flex;
             flex-direction: column;
             gap: 10px;
-            /* border: 1px solid green; */
-
             
             tr {
                 position: relative;
                 width: 100%;
-                padding: 15px 0 ;
-                background-color: var(--background);
-                /* border: solid 1px red; */
+                padding: 15px ;
+                background-color: var(--input);
                 max-height: 71px;
-                border-radius: 8px;
-                
+                border-radius: 8px;                
 
                 /* .hide{
                     display: none;
@@ -97,14 +103,10 @@ export const Content = styled.div`
                 td {
                     display: flex;
                     font-weight: 300;
-                    /* border: 1px solid green ; */
                     width: 100%;
-                    margin-left: 15px;
 
 
                     &:first-child{
-                        /* margin-top: 17px; */
-
                         font-weight: 700;
                     }
                 }
@@ -116,7 +118,7 @@ export const Content = styled.div`
 
 export const Box = styled.div`
     position: absolute;
-    left: 25.5rem;
+    left: 90%;
     bottom: 1.3rem;
 
     display: flex;
@@ -134,6 +136,11 @@ export const Box = styled.div`
         height: 15px;
         width: 22px;
     }
+
+    @media(max-width: 720px) {
+        position: absolute;
+        left: 85%;
+    }
 `;
 
 export const StyleModal = styled.div`
@@ -143,7 +150,6 @@ export const StyleModal = styled.div`
     padding: 5rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     position: relative;
 
     outline: 0;

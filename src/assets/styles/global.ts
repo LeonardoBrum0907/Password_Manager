@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
       --title: #A3A3A3;
       --text-input: #DCDCDC;
       --text-button: #090522;
+      --input: #C4C4C40A;
   }  
 
   *{
@@ -17,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     //quando a largura da tela for menor que esses px, ele vai mudar o tamanho da fonte
+
     @media (max-width: 1080px) {
       font-size: 93.75% // 15px
     }
