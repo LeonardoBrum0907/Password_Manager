@@ -45,6 +45,8 @@ export const Container = styled.div`
     }
     
 `;
+
+
 export const Content = styled.div`
     max-width: 100%;
     max-height: 75%;
@@ -90,15 +92,18 @@ export const Content = styled.div`
             
             tr {
                 position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center ;
+                height: 66px;
                 width: 100%;
                 padding: 15px ;
                 background-color: var(--input);
-                max-height: 71px;
                 border-radius: 8px;                
-
-                /* .hide{
+                
+                .hide {
                     display: none;
-                } */
+                }
 
                 td {
                     display: flex;
@@ -109,6 +114,7 @@ export const Content = styled.div`
                     &:first-child{
                         font-weight: 700;
                     }
+
                 }
             }
         }        

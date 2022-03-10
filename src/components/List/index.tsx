@@ -1,75 +1,83 @@
 import { Box, Content, Container } from "./styles";
-import  visibilityBlack  from "../../assets/visibilityBlack.svg";
+import show from "../../assets/visibilityBlack.svg";
+import hide from "../../assets/visibilityOffBlack.svg";
 import { NewPasswordModal } from "../NewPasswordModal";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ListContext } from "../../ListContext";
 
+export function List() {
+  const { lists } = useContext(ListContext);
 
-export function List() {  
+  const [isNewPasswordModal, setIsNewPasswordModal] = useState(false);
 
-    const { lists } = useContext(ListContext);
+  const [hidePassword, setHidePassword] = useState(true);
 
-    const [isNewPasswordModal, setIsNewPasswordModal] = useState(false);
+  const [id, setId] = useState(0);
 
-    function handleOpenNewPasswordModal() {
-        setIsNewPasswordModal(true);
-      }
-    
-    function handleCloseNewPasswordModal() {
-        setIsNewPasswordModal(false);
-      }
+  function handleOpenNewPasswordModal() {
+    setIsNewPasswordModal(true);
+  }
 
-    function handleHidePassword() {
-        let  button = document.getElementById("action-btn") as HTMLButtonElement;
+  function handleCloseNewPasswordModal() {
+    setIsNewPasswordModal(false);
+  }
 
-        button.addEventListener("click", function() {
-            let container = document.getElementById("container") as HTMLTableElement;
-
-            container.classList.toggle("hide");
-        })
-
+  function ocultPassword() {
+    if (hidePassword === true) {
+      setHidePassword(false);
+    } else {
+      setHidePassword(true);
     }
-    
-    return (
-        <Container>
-            <h1>My Passwords</h1>
-            <Content>
-           
-                <table> 
 
-                    <tbody>
-                        {lists.map(list => (
-                            <tr  key={list.id}>
-                                <td>{list.identifier}</td>
+    return hidePassword;
+  }
 
-                                <td id="container">{list.password}
-                                </td>
+  return (
+    <Container>
+      <h1>My Passwords</h1>
+      <Content>
+        <table>
+          <tbody>
+            {lists.map((list) => (
+              <tr key={list.id}>
+                <td>{list.identifier}</td>
 
-                                <Box onClick={handleHidePassword}  id="action-btn" >
-                                    <img src={visibilityBlack} alt="Ocultar" />
-                                </Box>
-                            </tr>
-                        ))}        
-                    </tbody>
+                {hidePassword && list.id === id ? (
+                  <td id={String(list.id)} className="teste">
+                    {list.password}
+                  </td>
+                ) : (
+                  <td id={String(list.id)} className="hide">
+                    {list.password}
+                  </td>
+                )}
 
-                </table> 
-            
+                <Box
+                  onClick={() => {
+                    setId(list.id);
+                    ocultPassword();
+                  }}
+                >
+                  {hidePassword && list.id === id ? (
+                    <img id="img" src={hide} alt="Ocultar" />
+                  ) : (
+                    <img id="img" src={show} alt="Ocultar" />
+                  )}
+                </Box>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Content>
 
+      <NewPasswordModal
+        isOpen={isNewPasswordModal}
+        onRequestClose={handleCloseNewPasswordModal}
+      />
 
-                
-            </Content>
-
-            <NewPasswordModal 
-                isOpen={isNewPasswordModal}
-                onRequestClose={handleCloseNewPasswordModal}
-            />
-                
-            <button type="button" onClick={handleOpenNewPasswordModal}> 
-                Register new
-            </button>
-
-        </Container>
-    
-        
-    );
+      <button type="button" onClick={handleOpenNewPasswordModal}>
+        Register new
+      </button>
+    </Container>
+  );
 }
