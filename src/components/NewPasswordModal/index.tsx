@@ -2,6 +2,7 @@ import { FormEvent, useState, useContext } from "react";
 import Modal from "react-modal";
 import { ListContext } from "../../ListContext";
 import { api } from "../../services/api";
+import { Button } from "../Button";
 
 import { Content } from "./styles";
 
@@ -55,7 +56,7 @@ export function NewPasswordModal({ isOpen, onRequestClose }: NewPasswordModalPro
                 onChange={event => setPassword(event.target.value)}//event.target.value sempre vai retornar uma string, caso eu queira um numero, tenho que colocar (Number(event.target.value))
             />
 
-            <button>Save</button>
+            <Button>Save</Button>
             </Content>
 
         </Modal>

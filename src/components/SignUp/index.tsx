@@ -1,4 +1,4 @@
-import { Content, Routes } from "./styles";
+import { Content, Routes } from "../SignIn/styles";
 import { Link } from 'react-router-dom';
 
 export function SignUp() {

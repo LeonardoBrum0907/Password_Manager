@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Content = styled.div`    
-    max-width: 23.37rem;
+     max-width: 23.37rem;
     margin: auto;
     margin-top: 15vh;
     padding: 2.5rem 2rem; 
@@ -27,20 +27,18 @@ export const Content = styled.div`
         font-size: 1rem;
         font-weight: 300;
 
-        background: var(--background);
+        background: var(--input);
         color: var(--title);
         border: 0;
         outline: 0;
         border-radius: 0.5rem;
-        filter: brightness(1.4);
     }
 
     
     @media(min-width: 720px) {
         max-width: 450px;
     }
-`;
-
+`; 
 export const Routes = styled.div`
     max-width: 100%;
 

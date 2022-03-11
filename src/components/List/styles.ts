@@ -6,7 +6,7 @@ export const Container = styled.div`
     max-width: 28rem;
     height: 100vh;
     margin: auto;
-    padding: 49px 0 35px 24px;
+    padding: 49px 0 35px 30px;
 
     h1 {
         font-size: 36px;
@@ -15,7 +15,7 @@ export const Container = styled.div`
         margin-bottom: 40px;
     }
 
-    button {
+    /* button {
         position: absolute;
         bottom: 24px;
         height: 3.5rem;
@@ -42,18 +42,19 @@ export const Container = styled.div`
         @media(max-width: 374px) {
             width: 274px;
         }
-    }
+    } */
     
 `;
 
 
 export const Content = styled.div`
-    max-width: 100%;
+    max-width: 390px;
+    width: 100%;
     max-height: 75%;
     align-items: center; 
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-right: 12px;
+    padding-right: 22px;
 
     @media(max-height: 570px) {
         max-height: 70%;
@@ -124,8 +125,8 @@ export const Content = styled.div`
 
 export const Box = styled.div`
     position: absolute;
-    left: 90%;
-    bottom: 1.3rem;
+    left: 88%;
+    bottom: 1rem;
 
     display: flex;
     align-items: center;
@@ -191,8 +192,8 @@ export const StyleModal = styled.div`
         filter: brightness(1.4);
     }
 
-    button {
+    /* button {
         position: absolute;
         bottom: 2.2rem;
-    }
+    } */
 `;

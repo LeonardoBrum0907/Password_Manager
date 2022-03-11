@@ -18,23 +18,29 @@ export const Content = styled.form`
     }
 
     input {
+        /* max-width: 360px; */
         width: 100%;
         height: 3rem;
         padding: 0 0.8rem;
+        /* margin: auto; */
         margin-bottom: 1.5rem;
         font-size: 1rem;
         font-weight: 300;
 
-        background: var(--background);
+        background: var(--input);
         color: var(--title);
         border: 0;
         outline: 0;
         border-radius: 0.5rem;
-        filter: brightness(1.4);
     }
 
+    /* input:first-child{
+        margin-bottom: 1.5rem;
+    } */
+/* 
     button {
         position: absolute;
+        width: 100%;
         bottom: 2.2rem;
 
         font-size: 1.5rem;
@@ -46,7 +52,6 @@ export const Content = styled.form`
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
         padding: 0.9rem 2rem;
         height: 3.5rem;
-        width: 100%;
         max-width: 360px;
 
         transition: filter 0.2s;
@@ -54,5 +59,5 @@ export const Content = styled.form`
         &:hover {
             filter: brightness(0.7)
         }
-    }
+    } */
 `;

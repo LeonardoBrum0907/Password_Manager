@@ -4,6 +4,8 @@ import hide from "../../assets/visibilityOffBlack.svg";
 import { NewPasswordModal } from "../NewPasswordModal";
 import { useContext, useEffect, useState } from "react";
 import { ListContext } from "../../ListContext";
+import { ButtonComponents } from "../Button/styles";
+import { Button } from "../Button";
 
 export function List() {
   const { lists } = useContext(ListContext);
@@ -75,9 +77,9 @@ export function List() {
         onRequestClose={handleCloseNewPasswordModal}
       />
 
-      <button type="button" onClick={handleOpenNewPasswordModal}>
+      <Button onClick={handleOpenNewPasswordModal}>
         Register new
-      </button>
+      </Button>
     </Container>
   );
 }
