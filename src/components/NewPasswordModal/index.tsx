@@ -1,10 +1,9 @@
-import { FormEvent, useState, useContext } from "react";
+import { FormEvent, useContext, useState } from "react";
 import Modal from "react-modal";
 import { ListContext } from "../../ListContext";
-import { api } from "../../services/api";
 import { Button } from "../Button";
-
 import { Content } from "./styles";
+
 
 
 interface  NewPasswordModalProps {

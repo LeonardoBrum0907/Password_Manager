@@ -13,37 +13,7 @@ export const Container = styled.div`
         font-weight: 500;
         color: var(--title);
         margin-bottom: 40px;
-    }
-
-    /* button {
-        position: absolute;
-        bottom: 24px;
-        height: 3.5rem;
-        width: 90%;
-
-        font-size: 1.5rem;
-        font-weight: 500;
-        color: var(--text-button);
-        background: var(--button);
-        outline: 0;
-        border: 0;
-        border-radius: 0.5rem;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-
-        transition: filter 0.2s;
-
-        &:hover {
-            filter: brightness(0.7)
-        }
-
-        @media(max-width: 425px) {
-            width: 89%;
-        }
-        @media(max-width: 374px) {
-            width: 274px;
-        }
-    } */
-    
+    }    
 `;
 
 
@@ -191,9 +161,4 @@ export const StyleModal = styled.div`
         border-radius: 0.5rem;
         filter: brightness(1.4);
     }
-
-    /* button {
-        position: absolute;
-        bottom: 2.2rem;
-    } */
 `;

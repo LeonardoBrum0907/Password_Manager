@@ -2,9 +2,8 @@ import { Box, Content, Container } from "./styles";
 import show from "../../assets/visibilityBlack.svg";
 import hide from "../../assets/visibilityOffBlack.svg";
 import { NewPasswordModal } from "../NewPasswordModal";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { ListContext } from "../../ListContext";
-import { ButtonComponents } from "../Button/styles";
 import { Button } from "../Button";
 
 export function List() {
