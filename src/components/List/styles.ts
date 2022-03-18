@@ -71,10 +71,6 @@ export const Content = styled.div`
                 padding: 15px ;
                 background-color: var(--input);
                 border-radius: 8px;                
-                
-                .hide {
-                    display: none;
-                }
 
                 td {
                     display: flex;
