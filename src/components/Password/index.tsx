@@ -10,7 +10,7 @@ interface PasswordPros {
 
 
 export function Password({list}: PasswordPros) {
-  const [hidePassword, setHidePassword] = useState(true);
+  const [hidePassword, setHidePassword] = useState(false);
   
   function ocultPassword() {
     setHidePassword((atual) => atual ? false : true)
