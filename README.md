@@ -44,3 +44,7 @@ _or_
 ```
 $ npm install
 ```
+
+<div align="center">
+  <img width="500" src="src/assets/readme/underConstruction.png">
+</div>
