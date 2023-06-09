@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
-import { ListContext } from "../../ListContext";
+// import { ListContext } from "../../ListContext";
 import { Button } from "../Button";
 import { NewPasswordModal } from "../NewPasswordModal";
 import { Password } from "../Password";
 import { Container, Content } from "./styles";
 
 export function List() {
-  const { lists } = useContext(ListContext);
+  // const { lists } = useContext(ListContext);
 
   const [isNewPasswordModal, setIsNewPasswordModal] = useState(false);
   
@@ -22,13 +22,13 @@ export function List() {
     <Container>
       <h1>My Passwords</h1>
       <Content>
-        <table>
+        {/* <table>
           <tbody>
             {lists.map((list) => (
               <Password key={list.id} list={list} />
             ))}
           </tbody>
-        </table>
+        </table> */}
       </Content>
 
       <NewPasswordModal

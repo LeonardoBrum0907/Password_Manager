@@ -4,17 +4,17 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
-    "miragejs": "^0.1.41",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-modal": "^3.14.2",
     "react-router": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.3.0",
     "web-vitals": "^1.0.1",
     "jwt-decode": "^3.1.2"
   },
   "devDependencies": {
+    "@rocketseat/eslint-config": "^1.2.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -26,6 +26,9 @@
     "@types/react-router": "^5.1.14",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.40.0",
     "react-router-dom": "^5.2.0",
     "typescript": "^4.1.2"
   },

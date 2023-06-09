@@ -1,51 +1,51 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createServer, Model } from 'miragejs';
+// import { createServer, Model } from 'miragejs';
 import { App } from './App';
 
-type List = {
-  id: number;
-  identifier: string;
-  password: string;
-}
+// type List = {
+//   id: number;
+//   identifier: string;
+//   password: string;
+// }
 
-createServer({
-  models: {
-    list: Model.extend<Partial<List>>({}),
-  },
+// createServer({
+//   models: {
+//     list: Model.extend<Partial<List>>({}),
+//   },
 
-  seeds(server) {
-    server.db.loadData({
-      lists: [
-        {
-          id: 1,
-          identifier: 'Facebook',
-          password: '12345678'
-        },
-        {
-          id: 2,
-          identifier: 'instagram',
-          password: '1234567890'
-        },
-      ],
-    })
-  },
+//   seeds(server) {
+//     server.db.loadData({
+//       lists: [
+//         {
+//           id: 1,
+//           identifier: 'Facebook',
+//           password: '12345678'
+//         },
+//         {
+//           id: 2,
+//           identifier: 'instagram',
+//           password: '1234567890'
+//         },
+//       ],
+//     })
+//   },
 
-  routes() {
-    this.namespace = 'api';
+//   routes() {
+//     this.namespace = 'api';
 
-    this.get('/list', () => {
-      return this.schema.all('list')      
-    })
+//     this.get('/list', () => {
+//       return this.schema.all('list')      
+//     })
 
-    this.post('/list', (schema, request) => {
-      const data = JSON.parse(request.requestBody)
+//     this.post('/list', (schema, request) => {
+//       const data = JSON.parse(request.requestBody)
 
-      return schema.create('list', data)
-    })
+//       return schema.create('list', data)
+//     })
 
-  }
-})
+//   }
+// })
 
 ReactDOM.render(
   <React.StrictMode>
