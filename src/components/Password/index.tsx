@@ -1,15 +1,15 @@
 import { useState } from "react";
 import hide from '../../assets/visibilityBlack.svg';
 import show from '../../assets/visibilityOffBlack.svg';
-import { List } from "../../ListContext";
+// import { List } from "../../ListContext";
 import { Box } from "../List/styles";
 
-interface PasswordPros {
-  list: List;
-}
+// interface PasswordPros {
+//   list: List;
+// }
 
 
-export function Password({list}: PasswordPros) {
+export function Password(/*{list}: PasswordPros*/) {
   const [hidePassword, setHidePassword] = useState(false);
   
   function ocultPassword() {
@@ -18,13 +18,13 @@ export function Password({list}: PasswordPros) {
   
   return(
     <tr>
-      <td>{list.identifier}</td>
+      {/* <td>{list.identifier}</td> */}
 
-      {hidePassword && (
+      {/* {hidePassword && (
         <td id={String(list.id)} className="teste">
           {list.password}
         </td>
-      )}      
+      )}       */}
 
       <Box
         onClick={() => {
