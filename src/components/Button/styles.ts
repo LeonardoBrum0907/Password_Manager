@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ButtonComponents = styled.button`
   position: absolute;
@@ -19,19 +19,19 @@ export const ButtonComponents = styled.button`
   transition: filter 0.2s;
 
   &:hover {
-      filter: brightness(0.7)
+    filter: brightness(0.7);
   }
 
-  @media(max-width: 1080px) {
-      width: 24rem;
+  @media (max-width: 1080px) {
+    width: 24rem;
   }
-  @media(max-width: 720px) {
-      width: 23.71rem;
+  @media (max-width: 720px) {
+    width: 23.71rem;
   }
-  @media(max-width: 375px) {
-      width: 22.5rem;
+  @media (max-width: 375px) {
+    width: 22.5rem;
   }
-  @media(max-width: 360px) {
-    width: 18.57rem
+  @media (max-width: 360px) {
+    width: 18.57rem;
   }
-`;
+`

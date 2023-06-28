@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 // import { createServer, Model } from 'miragejs';
-import { App } from './App';
+import { App } from './App'
 
 // type List = {
 //   id: number;
@@ -35,7 +35,7 @@ import { App } from './App';
 //     this.namespace = 'api';
 
 //     this.get('/list', () => {
-//       return this.schema.all('list')      
+//       return this.schema.all('list')
 //     })
 
 //     this.post('/list', (schema, request) => {
@@ -51,5 +51,5 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
-);
+  document.getElementById('root'),
+)

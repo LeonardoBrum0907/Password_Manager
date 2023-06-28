@@ -1,34 +1,33 @@
-import { useState } from "react";
-import hide from '../../assets/visibilityBlack.svg';
-import show from '../../assets/visibilityOffBlack.svg';
-// import { List } from "../../ListContext";
-import { Box } from "../List/styles";
+import { useState } from 'react'
+import hide from '../../assets/visibilityBlack.svg'
+import show from '../../assets/visibilityOffBlack.svg'
+import { Box } from '../List/styles'
+import { List } from 'src/context/ListContext'
 
-// interface PasswordPros {
-//   list: List;
-// }
+interface PasswordPros {
+  list: List
+}
 
+export function Password({ list }: PasswordPros) {
+  const [hidePassword, setHidePassword] = useState(false)
 
-export function Password(/*{list}: PasswordPros*/) {
-  const [hidePassword, setHidePassword] = useState(false);
-  
   function ocultPassword() {
-    setHidePassword((atual) => atual ? false : true)
+    setHidePassword((atual) => !atual)
   }
-  
-  return(
-    <tr>
-      {/* <td>{list.identifier}</td> */}
 
-      {/* {hidePassword && (
-        <td id={String(list.id)} className="teste">
+  return (
+    <tr>
+      <td>{list.identifier}</td>
+
+      {hidePassword && (
+        <td id={String(list._id)} className="teste">
           {list.password}
         </td>
-      )}       */}
+      )}
 
       <Box
         onClick={() => {
-          ocultPassword();
+          ocultPassword()
         }}
       >
         {hidePassword ? (
@@ -38,5 +37,5 @@ export function Password(/*{list}: PasswordPros*/) {
         )}
       </Box>
     </tr>
-  );
+  )
 }
